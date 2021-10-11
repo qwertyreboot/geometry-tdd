@@ -22,6 +22,7 @@ public class Rectangle {
     }
 
     public void setLength(double length) {
+        if (length <= 0) throw new IllegalArgumentException("length should be greater than 0");
         this.length = length;
     }
 
@@ -30,6 +31,7 @@ public class Rectangle {
     }
 
     public void setBreadth(double breadth) {
+        if (breadth <= 0) throw new IllegalArgumentException("breadth should be greater than 0");
         this.breadth = breadth;
     }
 }
