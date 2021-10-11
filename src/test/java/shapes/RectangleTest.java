@@ -8,7 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class RectangleTest {
     @Test
     public void verifyAreaOutput() {
-        Rectangle rectangle = new Rectangle(5, 10);
-        Assertions.assertEquals(rectangle.area(), 50);
+        double length = Math.random();
+        double breadth = Math.random();
+        Rectangle rectangle = new Rectangle(length, breadth);
+        Assertions.assertEquals(rectangle.area(), length * breadth);
     }
 }
