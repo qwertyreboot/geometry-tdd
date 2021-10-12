@@ -1,9 +1,6 @@
 package shapes;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -45,6 +42,7 @@ class RectangleTest {
     }
 
     @Test
+    @RepeatedTest(value = 10, name = "testing area {currentRepetition} of {totalRepetitions}")
     @DisplayName("verify that the calculation of the area is correct")
     public void verifyAreaOutput() {
         double length = Math.random();
