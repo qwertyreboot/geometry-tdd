@@ -1,6 +1,9 @@
 package shapes;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -50,5 +53,13 @@ class RectangleTest {
         rectangle.setLength(length);
         rectangle.setBreadth(breadth);
         Assertions.assertEquals(rectangle.area(), length * breadth);
+    }
+
+    @ParameterizedTest(name = "testing perimeter with {argumentsWithNames}")
+    @CsvSource({"2, 3, 10", "2, 1, 6", "3, 3, 12"})
+    public void verifyPerimeterOutput(double length, double breadth, double perimeter) {
+        rectangle.setLength(length);
+        rectangle.setBreadth(breadth);
+        Assertions.assertEquals(rectangle.perimeter(), perimeter);
     }
 }

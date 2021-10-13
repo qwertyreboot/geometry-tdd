@@ -34,4 +34,8 @@ public class Rectangle {
         if (breadth <= 0) throw new IllegalArgumentException("breadth should be greater than 0");
         this.breadth = breadth;
     }
+
+    public double perimeter() {
+        return 2*(this.length + this.breadth);
+    }
 }
