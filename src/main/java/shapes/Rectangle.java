@@ -9,8 +9,8 @@ public class Rectangle {
     }
 
     Rectangle(double length, double breadth) {
-        this.length = length;
-        this.breadth = breadth;
+        setLength(length);
+        setBreadth(breadth);
     }
 
     public double area() {

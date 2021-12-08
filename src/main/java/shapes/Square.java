@@ -5,6 +5,7 @@ public class Square extends Rectangle{
     Square() {
         super(1 , 1);
     }
+
     Square(double side) {
         super(side, side);
     }
