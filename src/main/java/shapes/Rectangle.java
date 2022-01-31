@@ -2,7 +2,7 @@ package shapes;
 
 public class Rectangle {
     private double length;
-    private double breadth;
+private double breadth;
 
     Rectangle() {
         this(1, 1);
